@@ -1,0 +1,39 @@
+{
+  "name": "delivery-risk-radar",
+  "version": "0.1.0",
+  "description": "Reads GitHub or Jira issues and writes a weekly delivery-risk report: per-issue signals, milestone slip projected from measured throughput, and an optional LLM narrative that cannot move a number.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Krunal Patel",
+  "main": "dist/src/index.js",
+  "bin": {
+    "delivery-risk-radar": "dist/src/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc",
+    "demo": "node --experimental-strip-types src/demo.ts",
+    "report": "node --experimental-strip-types src/cli.ts",
+    "test": "tsc --noEmit && node --experimental-strip-types --test test/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "delivery-risk",
+    "engineering-management",
+    "github",
+    "jira",
+    "throughput",
+    "program-management"
+  ],
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "typescript": "^7.0.2"
+  }
+}
